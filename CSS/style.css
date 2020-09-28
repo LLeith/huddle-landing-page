@@ -1,6 +1,6 @@
 * {
   --light: #fff;
-  /* fix --shadow: 5px 10px 8px hsl(257, 40%, 49%); */
+  --shadow: 0px 10px 6px 0px rgba(0, 0, 0, 0.15);
 }
 
 html {
@@ -16,7 +16,6 @@ body {
   background-position: bottom;
   margin: 50px 60px;
   line-height: 1.5;
-  /* height: 100vh; */
 }
 
 #content h1 {
@@ -40,11 +39,11 @@ button {
   padding: 16px 55px;
   text-align: center;
   display: inline-block;
-  font-size: 16px;
   cursor: pointer;
   border-radius: 30px;
   font-size: 1.1rem;
-  /* box-shadow: var(--shadow); */
+  box-shadow: 0px 10px 6px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow);
 }
 
 .column {
@@ -54,24 +53,29 @@ button {
   padding: 3rem;
 }
 
-.desktop-image {
-  background-color: hsl(257, 40%, 49%);
-  /* var(--primary); */
-  /* z-index: -1; */
+.social-media {
+  color: var(--light);
+  font-size: 35px;
+  padding: 1rem;
+  float: right;
+}
+
+.icon {
+  border-radius: 50%;
+  border: 1px solid white;
+  cursor: pointer;
+  justify-content: center;
+  padding: 0.75rem;
 }
 
 .attribution {
   font-size: 11px;
-  text-align: center;
+  margin-bottom: 0;
+  margin-left: 0;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-.social-media {
-  color: var(--light);
-  font-size: 35px;
 }
 
 /* mobile devices only */
@@ -85,6 +89,31 @@ button {
   }
 
   .column {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .social-media {
+    color: var(--light);
+    font-size: 15px;
+    padding: 1rem;
+  }
+
+  #mock-up {
+    width: 100%;
+  }
+
+  #content h1 {
+    font-size: 1.5rem;
+  }
+
+  #content p {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 14px 60px;
+    font-size: 0.9rem;
   }
 }
