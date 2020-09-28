@@ -1,0 +1,90 @@
+* {
+  --light: #fff;
+  /* fix --shadow: 5px 10px 8px hsl(257, 40%, 49%); */
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(257, 40%, 49%) url(../images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  max-width: 1440px;
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: bottom;
+  margin: 50px 60px;
+  line-height: 1.5;
+  /* height: 100vh; */
+}
+
+#content h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: var(--light);
+  font-size: 2.5rem;
+}
+
+#content p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: var(--light);
+  font-size: 1.2rem;
+}
+
+button {
+  border: none;
+  background-color: #fff;
+  color: hsl(257, 40%, 49%);
+  padding: 16px 55px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  /* box-shadow: var(--shadow); */
+}
+
+.column {
+  display: grid;
+  grid-gap: 55px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3rem;
+}
+
+.desktop-image {
+  background-color: hsl(257, 40%, 49%);
+  /* var(--primary); */
+  /* z-index: -1; */
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.social-media {
+  color: var(--light);
+  font-size: 35px;
+}
+
+/* mobile devices only */
+@media only screen and (max-width: 500px) {
+  body {
+    background: hsl(257, 40%, 49%) url('../images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: top;
+  }
+
+  .column {
+    grid-template-columns: 1fr;
+  }
+}
